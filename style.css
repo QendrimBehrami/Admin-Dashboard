@@ -11,7 +11,7 @@ body {
   margin: 0;
   gap: 0px;
   font-family: "Roboto", "Arial", sans-serif;
-  font-size: 1.5rem;
+  /* font-size: 1.5rem; */
 }
 
 .sidebar {
@@ -146,11 +146,75 @@ header {
   background-color: var(--accent);
   border: none;
   font-weight: bold;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   border-radius: 15px;
   color: var(--accent-foreground);
 }
 
 .content {
   background-color: var(--gray);
+  display: grid;
+  grid-template-columns: 3.5fr 1fr;
+  padding: 3rem 3rem;
+  gap: 3rem;
+}
+
+.content .left {
+  background-color: orange;
+}
+
+.right {
+  /* background-color: aqua; */
+  grid-column: 2/3;
+  display: grid;
+  height: 100%;
+  grid-template-rows: 50% 50%;
+}
+
+.announcements {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  background-color: white;
+  border-radius: 15px;
+  /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.8); */
+  padding: 1.5rem 1.5rem;
+}
+
+.announcement {
+  position: relative;
+  padding: 1rem;
+}
+
+.announcement:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 1rem;
+  right: 1rem;
+  border-bottom: 1px solid #ccc;
+  width: calc(100% - 2rem); /* Ensure that padding is respected*/
+}
+
+.announcement h3,
+.announcement p {
+  margin: 0 0 0.5rem 0;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.announcement p {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  white-space: normal;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.announcement a {
+  text-decoration: none;
+  color: inherit;
+  font-weight: 550;
 }
