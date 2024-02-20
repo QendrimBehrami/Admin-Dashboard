@@ -1,0 +1,41 @@
+:root {
+  --orange: #e5774ff8;
+}
+
+body {
+  display: grid;
+  grid-template-columns: 27rem 1fr;
+  margin: 0;
+  gap: 20px;
+  font-family: "Roboto", "Arial", sans-serif;
+}
+
+.sidebar {
+  background-color: var(--orange);
+  position: sticky;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  padding: 0 2rem;
+  top: 0;
+}
+
+.sidebar-logo {
+  display: flex;
+  align-self: center;
+  align-items: center;
+  gap: 10px;
+  font-size: 2rem;
+}
+
+.sidebar-items {
+  font-size: 2rem;
+  font-weight: 550;
+}
+
+.sidebar-items ul {
+  list-style-type: none;
+  gap: 20px;
+  display: grid;
+  margin-bottom: 8rem;
+}
