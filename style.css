@@ -3,6 +3,7 @@
   /* --accent: #ef4444; */
   --gray: #e2e8f0;
   --accent-foreground: white;
+  --light-accent: #00d4ff;
 }
 
 body {
@@ -15,8 +16,12 @@ body {
 }
 
 .sidebar {
-  /* background-color: var(--accent); */
-  background-image: linear-gradient(to bottom, var(--accent), black);
+  background-image: linear-gradient(
+    to bottom,
+    var(--light-accent) 0%,
+    var(--accent) 25%,
+    black 100%
+  );
   position: sticky;
   margin: 0;
   padding: 0;
@@ -166,11 +171,11 @@ header {
 }
 
 .buttons button {
-  background-image: linear-gradient(
-    to right,
-    var(--accent) 0%,
-    #26d0ce 51%,
-    var(--accent) 100%
+  background: radial-gradient(
+    circle,
+    black 0%,
+    var(--accent) 50%,
+    var(--light-accent) 100%
   );
   margin: 10px;
   padding: 1.2rem 2rem;
