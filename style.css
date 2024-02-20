@@ -106,7 +106,12 @@ header {
   align-items: center;
 }
 
-.profile .profile-picture {
+.profile a {
+  width: inherit;
+  height: inherit;
+}
+
+.profile a > .profile-picture {
   max-height: 100%;
   border-radius: 50%;
   margin-right: 1rem;
@@ -134,7 +139,12 @@ header {
   gap: 2rem;
 }
 
-.greeting .profile-picture {
+.greeting a {
+  width: inherit;
+  height: inherit;
+}
+
+.greeting a > .profile-picture {
   max-height: 100%;
   border-radius: 50%;
 }
@@ -225,4 +235,51 @@ header {
   text-decoration: none;
   color: inherit;
   font-weight: 550;
+}
+
+.trending {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  background-color: white;
+  border-radius: 15px;
+  /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.8); */
+  padding: 1.5rem 1.5rem;
+}
+
+.trending > .profile {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.trending > .profile img {
+  border-radius: 50%;
+  width: 4rem;
+  height: 4rem;
+  object-fit: cover;
+}
+
+.trending > .profile > .description {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.trending > .profile > .description > h3 {
+  margin: 0.5rem 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:visited {
+  color: inherit;
+  text-decoration: none;
+}
+
+.trending > .profile > .description > div {
+  color: #6e6e6e;
 }

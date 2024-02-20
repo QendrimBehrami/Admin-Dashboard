@@ -13,19 +13,21 @@
   <body>
     <div class="sidebar">
       <div class="sidebar-logo">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 24 24"
-          class="grow"
-          width="100px"
-          height="100px"
-          alt="Math Symbol Pi"
-        >
-          <title>pi-box</title>
-          <path
-            d="M5,3C3.89,3 3,3.9 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V5A2,2 0 0,0 19,3M6,7H17V9H15V14A1,1 0 0,0 16,15A1,1 0 0,0 17,14H19A3,3 0 0,1 16,17A3,3 0 0,1 13,14V9H10V17H8V9H6"
-          />
-        </svg>
+        <a href="https://en.wikipedia.org/wiki/Pi" target="_blank">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            class="grow"
+            width="100px"
+            height="100px"
+            alt="Math Symbol Pi"
+          >
+            <title>PiBoard</title>
+            <path
+              d="M5,3C3.89,3 3,3.9 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V5A2,2 0 0,0 19,3M6,7H17V9H15V14A1,1 0 0,0 16,15A1,1 0 0,0 17,14H19A3,3 0 0,1 16,17A3,3 0 0,1 13,14V9H10V17H8V9H6"
+            />
+          </svg>
+        </a>
         <h1>PiBoard</h1>
       </div>
       <div class="sidebar-items">
@@ -52,28 +54,49 @@
             <input type="text" name="search-bar" id="search-bar" />
           </div>
           <div class="profile">
+            <!-- This is extremely weird lol -->
             <button class="material-symbols-outlined grow">
               notifications_active
             </button>
-
-            <img
-              src="images/Euler.jpg"
-              alt="Image of Leonhard Euler"
-              class="profile-picture grow"
-            />
-            Leonhard Euler
+            <a
+              href="https://en.wikipedia.org/wiki/Leonhard_Euler"
+              target="_blank"
+            >
+              <img
+                src="images/Euler.jpg"
+                alt="Image of Leonhard Euler"
+                class="profile-picture grow"
+              />
+            </a>
+            <h2>
+              <a
+                href="https://en.wikipedia.org/wiki/Leonhard_Euler"
+                target="_blank"
+                >Leonhard Euler</a
+              >
+            </h2>
           </div>
         </div>
         <div class="second-row">
           <div class="greeting">
-            <img
-              src="images/Euler.jpg"
-              alt="Image of Leonhard Euler"
-              class="profile-picture grow"
-            />
+            <a
+              href="https://en.wikipedia.org/wiki/Leonhard_Euler"
+              target="_blank"
+            >
+              <img
+                src="images/Euler.jpg"
+                alt="Image of Leonhard Euler"
+                class="profile-picture grow"
+              />
+            </a>
             <div class="greeting-message">
               <span>Hi there,</span>
-              <h2>Leonhard Euler (@euler)</h2>
+              <a
+                href="https://en.wikipedia.org/wiki/Leonhard_Euler"
+                target="_blank"
+              >
+                <h2>Leonhard Euler (@euler)</h2>
+              </a>
             </div>
           </div>
           <div class="buttons">
@@ -126,8 +149,129 @@
             </div>
           </div>
 
-          <div class="Trending">
-            <h3>Trending</h3>
+          <div>
+            <h2>Trending</h2>
+            <div class="trending">
+              <!-- Carl Friedrich Gauss -->
+              <div class="profile">
+                <a
+                  href="https://en.wikipedia.org/wiki/Carl_Friedrich_Gauss"
+                  target="_blank"
+                >
+                  <img
+                    src="images/gauss.webp"
+                    alt="Image of Carl Friedrich Gauss"
+                    class="grow"
+                  />
+                </a>
+                <div class="description">
+                  <h3>
+                    <a
+                      href="https://en.wikipedia.org/wiki/Carl_Friedrich_Gauss"
+                      target="_blank"
+                      >@Gauss</a
+                    >
+                  </h3>
+                  <div>Normal distribution</div>
+                </div>
+              </div>
+
+              <!-- Srinivasa Ramanujan -->
+              <div class="profile">
+                <a
+                  href="https://en.wikipedia.org/wiki/Srinivasa_Ramanujan"
+                  target="_blank"
+                >
+                  <img
+                    src="images/ramanujan.webp"
+                    alt="Image of Srinivasa Ramanujan"
+                    class="grow"
+                  />
+                </a>
+                <div class="description">
+                  <h3>
+                    <a
+                      href="https://en.wikipedia.org/wiki/Srinivasa_Ramanujan"
+                      target="_blank"
+                      >@Ramanujan
+                    </a>
+                  </h3>
+                  <div>Ramanujan Prime Numbers</div>
+                </div>
+              </div>
+
+              <!-- Ada Lovelace -->
+              <div class="profile">
+                <a
+                  href="https://en.wikipedia.org/wiki/Ada_Lovelace"
+                  target="_blank"
+                >
+                  <img
+                    src="images/lovelace.webp"
+                    alt="Image of Ada Lovelace"
+                    class="grow"
+                  />
+                </a>
+                <div class="description">
+                  <h3>
+                    <a
+                      href="https://en.wikipedia.org/wiki/Ada_Lovelace"
+                      target="_blank"
+                      >@Lovelace</a
+                    >
+                  </h3>
+                  <div>Analytical Engine Algorithm</div>
+                </div>
+              </div>
+
+              <!-- Henri Poincaré -->
+              <div class="profile">
+                <a
+                  href="https://en.wikipedia.org/wiki/Henri_Poincar%C3%A9"
+                  target="_blank"
+                >
+                  <img
+                    src="images/poincare.jpg"
+                    alt="Image of Henri Poincaré"
+                    class="grow"
+                  />
+                </a>
+                <div class="description">
+                  <h3>
+                    <a
+                      href="https://en.wikipedia.org/wiki/Henri_Poincar%C3%A9"
+                      target="_blank"
+                      >@Poincare</a
+                    >
+                  </h3>
+                  <div>Poincaré Conjecture</div>
+                </div>
+              </div>
+
+              <!-- Pierre-Simon Laplace -->
+              <div class="profile">
+                <a
+                  href="https://en.wikipedia.org/wiki/Pierre-Simon_Laplace"
+                  target="_blank"
+                >
+                  <img
+                    src="images/laplace.jpg"
+                    alt="Image of Pierre-Simon Laplace"
+                    class="grow"
+                  />
+                </a>
+                <div class="description">
+                  <h3>
+                    <a
+                      href="https://en.wikipedia.org/wiki/Pierre-Simon_Laplace"
+                      target="_blank"
+                      >@Laplace</a
+                    >
+                  </h3>
+                  <div>Laplace's Equation</div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
