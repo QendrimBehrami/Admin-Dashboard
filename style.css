@@ -4,6 +4,7 @@
   --gray: #e2e8f0;
   --accent-foreground: white;
   --light-accent: #00d4ff;
+  --gray-foreground: #6e6e6e;
 }
 
 body {
@@ -12,7 +13,6 @@ body {
   margin: 0;
   gap: 0px;
   font-family: "comic neue", "Arial", sans-serif;
-  /* font-size: 1.5rem; */
 }
 
 .sidebar {
@@ -71,7 +71,8 @@ body {
 
 main {
   display: grid;
-  grid-template-rows: 1fr 5fr;
+  grid-template-rows: 1fr auto;
+  height: 100%;
 }
 
 header {
@@ -199,23 +200,36 @@ header {
 }
 
 .content {
-  background-color: var(--gray);
+  /* background-color: var(--gray); */
+  background-image: linear-gradient(
+      to right,
+      rgba(255, 255, 255, 0.1) 1px,
+      transparent 1px
+    ),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.1) 1px, transparent 1px);
+  background-size: 20px 20px;
+  background-attachment: fixed;
+  background-color: var(--accent);
   display: grid;
   grid-template-columns: 3.5fr 1fr;
   padding: 3rem 3rem;
   gap: 3rem;
 }
 
-.content .left {
-  background-color: orange;
-}
-
 .right {
-  /* background-color: aqua; */
   grid-column: 2/3;
   display: grid;
-  height: 100%;
   grid-template-rows: 50% 50%;
+  padding-bottom: 5rem;
+  padding-left: 4rem;
+  border-left: 2px dashed white;
+}
+
+.content h2 {
+  color: white;
+  font-weight: 600;
+  font-size: 2rem;
+  font-style: italic;
 }
 
 .announcements {
@@ -224,7 +238,6 @@ header {
   gap: 1rem;
   background-color: white;
   border-radius: 15px;
-  /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.8); */
   padding: 1.5rem 1.5rem;
 }
 
@@ -272,7 +285,6 @@ header {
   gap: 2rem;
   background-color: white;
   border-radius: 15px;
-  /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.8); */
   padding: 1.5rem 1.5rem;
 }
 
@@ -310,5 +322,71 @@ a:visited {
 }
 
 .trending > .profile > .description > div {
-  color: #6e6e6e;
+  color: var(--gray-foreground);
+}
+
+.projects {
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  gap: 3rem;
+  grid-template-columns: repeat(auto-fill, minmax(25rem, 1fr));
+  padding: 2rem;
+}
+
+.project {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 10px;
+  border-left: 1rem solid var(--light-accent);
+  max-width: 25rem;
+  transition: all 0.2s ease-in-out;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.project:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+}
+
+.project > p {
+  color: var(--gray-foreground);
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  white-space: normal;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-bottom: 2rem;
+}
+
+.project > .actions {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.project > .actions > button {
+  position: relative;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  display: inline-block;
+  font-weight: 600;
+}
+
+.project > .actions .add {
+  position: absolute;
+  font-size: 14px;
+  bottom: 3px;
+  right: 6px;
+  background-color: white;
+  border-radius: 50%;
+  width: 10px;
+  height: 10px;
+  color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 0 2px white;
 }
